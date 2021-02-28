@@ -45,7 +45,7 @@ class RoomTestCase(unittest.TestCase):
       'description': 'This is a forest'
     })
     self.room.connect('east', forest)
-    self.assertEquals(self.room.exits['east'], forest)
+    self.assertEqual(self.room.exits['east'], forest)
 
 if __name__ == '__main__':
   unittest.main()
