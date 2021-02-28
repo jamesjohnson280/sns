@@ -1,4 +1,4 @@
-rooms = {
+Rooms = {
   'road': {
     'key': 'road',
     'name': 'Dusty Dirt Road',
