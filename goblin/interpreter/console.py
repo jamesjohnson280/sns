@@ -1,5 +1,8 @@
 '''Handles console I/O'''
+import textwrap
 
 def write(s):
   '''Prints a string to stdout'''
-  print(s)
+  paragraphs = s.split('\n')
+  for p in paragraphs:
+    print(textwrap.fill(p))
