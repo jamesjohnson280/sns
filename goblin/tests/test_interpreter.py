@@ -5,12 +5,12 @@ import unittest
 
 from goblin.interpreter import console
 from goblin import interpreter
-from goblin.data.rooms import Rooms
+from goblin.data import Data as data
 
 class InterpreterTestCase(unittest.TestCase):
   '''The `Interpreter`'''
   def setUp(self):
-    interpreter.init({ 'rooms': Rooms }, console)
+    interpreter.init(data, console)
     self.stdout = sys.stdout
     sys.stdout = io.StringIO()
 
