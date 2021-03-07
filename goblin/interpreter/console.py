@@ -6,3 +6,7 @@ def write(s):
   paragraphs = s.split('\n')
   for p in paragraphs:
     print(textwrap.fill(p))
+
+def read():
+  '''Reads in a string from stdin and returns it'''
+  return input()
