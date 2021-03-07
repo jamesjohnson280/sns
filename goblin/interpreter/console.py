@@ -7,6 +7,6 @@ def write(s):
   for p in paragraphs:
     print(textwrap.fill(p))
 
-def read():
+def read(prompt = ''):
   '''Reads in a string from stdin and returns it'''
-  return input()
+  return input(prompt)

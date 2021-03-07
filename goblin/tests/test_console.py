@@ -23,6 +23,12 @@ class ConsoleTestCase(unittest.TestCase):
     text = console.read()
     self.assertEqual(text, 'Hello, world!')
 
+  def test_prompt(self):
+    '''It should display an input prompt when supplied'''
+    self.mock_stdio('hi')
+    console.read('>')
+    self.assertEqual(sys.stdout.getvalue(), '>')
+
   def tearDown(self):
     sys.stdin = self.stdin
     sys.stdout = self.stdout
