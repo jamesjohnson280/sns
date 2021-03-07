@@ -1,6 +1,8 @@
 '''The adventure interpreter'''
 from . import world
 from . import player
+from . import console
+from . import parser
 
 _player = None
 _con = None
@@ -16,3 +18,9 @@ def init(data, console):
 def play():
   d = _player.location.player_description()
   _con.write(d)
+  while True:
+    text = console.read('>')
+    try: 
+      parser.parse(text)
+    except parser.ParserError as error:
+      console.write(error.message)
