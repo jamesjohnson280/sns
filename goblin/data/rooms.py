@@ -7,5 +7,14 @@ Rooms = {
     'exits': {
       'north': 'forest'
     }
+  },
+  'forest': {
+    'key': 'forest',
+    'name': 'Dim Forest',
+    'description':
+    '''The forest is thick with growth casting a dim green light around you. You can still see the road to the south''',
+    'exits': {
+      'south': 'road'
+    }
   }
 }
